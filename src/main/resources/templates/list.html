@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="frmList" id="frmList">
+    <p align="center"><!--<img src="images/flower3.gif" width="52" height="46">-->
+        <u>회원 목록</u></p>
+            <table align="center" width="80%" border="1" cellspacing="0" cellpadding="0">
+
+                <tr>
+                    <th width="20%">이름</th>
+                    <th width="20%">아이디</th>
+                    <th width="35%">이메일</th>
+                    <th width="30%">기타</th>
+                </tr>
+                <tr>
+                    {{#members}}
+                    <td align="center">{{name}}</td>
+                    <td align="center">{{id}}</td>
+                    <td align="center">{{email}}</td>
+                    <td align="center">&nbsp;
+                    [<a href = "#">상세 정보</a>]
+                    [<a href = "#">수정</a>]
+                    [<a href = "#">삭제</a>]
+                    {{/members}}
+                </tr>
+    </table>
+    <br>
+    <div align="center">
+        [<a href="./create_form.jsp">관리자가 직접 회원 가입 처리</a>]
+    </div>
+</form>
+</body>
+</html>

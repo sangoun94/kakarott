@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/create")
+    @RequestMapping(value = "create.do", method = {RequestMethod.GET,RequestMethod.POST})
     public User create(@RequestBody UserDTO userDTO){
         //int id = Integer.valueOf(user.size() + 1);
         User users = toUser(userDTO);
